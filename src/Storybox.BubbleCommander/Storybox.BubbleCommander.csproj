@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3909AE2F-2E9D-453A-BC1C-BAFB9733E2A4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{88ABF7EF-EDA8-4755-93A9-68ED04AEE99F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Storybox.Cli</RootNamespace>
-    <AssemblyName>Storybox.Cli</AssemblyName>
+    <RootNamespace>Storybox.BubbleCommander</RootNamespace>
+    <AssemblyName>Storybox.BubbleCommander</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,14 +29,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Compose, Version=0.1.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Compose.0.1.5-beta\lib\dotnet\Compose.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.Framework.DependencyInjection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Framework.DependencyInjection.1.0.0-beta6\lib\net45\Microsoft.Framework.DependencyInjection.dll</HintPath>
       <Private>True</Private>
@@ -52,38 +44,22 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationExtensions.cs" />
-    <Compile Include="CommandLine.cs" />
-    <Compile Include="ConsoleCommandLine.cs" />
-    <Compile Include="GameFactory.cs" />
-    <Compile Include="PreResolvedGameFactory.cs" />
-    <Compile Include="HardcodedEnglishResourceDictionary.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResourceDictionary.cs" />
-    <Compile Include="SelectGame.cs" />
     <Compile Include="ServiceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Storybox.BubbleCommander\Storybox.BubbleCommander.csproj">
-      <Project>{88abf7ef-eda8-4755-93a9-68ed04aee99f}</Project>
-      <Name>Storybox.BubbleCommander</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Storybox.Core\Storybox.Core.csproj">
       <Project>{3856ee23-9798-4c64-9b65-0d46fbb234b0}</Project>
       <Name>Storybox.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Storybox.Syn\Storybox.Syn.csproj">
-      <Project>{be08ed47-27fd-4136-84c6-78695c91a9dc}</Project>
-      <Name>Storybox.Syn</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

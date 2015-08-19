@@ -1,15 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Cli", "src\Storybox.Cli\Storybox.Cli.csproj", "{3909AE2F-2E9D-453A-BC1C-BAFB9733E2A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Core", "src\Storybox.Core\Storybox.Core.csproj", "{3856EE23-9798-4C64-9B65-0D46FBB234B0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Data", "src\Storybox.Data\Storybox.Data.csproj", "{800989B9-3854-4E69-AC00-F1EBC7BC0A07}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Common", "src\Storybox.Common\Storybox.Common.csproj", "{F9086230-1756-4E09-93FD-0CB392AB94CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C4A39258-FC90-4C99-835B-4DADE67A31F1}"
 EndProject
@@ -21,6 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Cli.Tests", "tests\Storybox.Cli.Tests\Storybox.Cli.Tests.csproj", "{D52B625D-254C-46E1-8C0D-AAD89B67EF49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Syn", "src\Storybox.Syn\Storybox.Syn.csproj", "{BE08ED47-27FD-4136-84C6-78695C91A9DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.BubbleCommander", "src\Storybox.BubbleCommander\Storybox.BubbleCommander.csproj", "{88ABF7EF-EDA8-4755-93A9-68ED04AEE99F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,14 +38,18 @@ Global
 		{3856EE23-9798-4C64-9B65-0D46FBB234B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3856EE23-9798-4C64-9B65-0D46FBB234B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3856EE23-9798-4C64-9B65-0D46FBB234B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{800989B9-3854-4E69-AC00-F1EBC7BC0A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{800989B9-3854-4E69-AC00-F1EBC7BC0A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{800989B9-3854-4E69-AC00-F1EBC7BC0A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{800989B9-3854-4E69-AC00-F1EBC7BC0A07}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9086230-1756-4E09-93FD-0CB392AB94CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9086230-1756-4E09-93FD-0CB392AB94CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9086230-1756-4E09-93FD-0CB392AB94CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9086230-1756-4E09-93FD-0CB392AB94CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D52B625D-254C-46E1-8C0D-AAD89B67EF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52B625D-254C-46E1-8C0D-AAD89B67EF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52B625D-254C-46E1-8C0D-AAD89B67EF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52B625D-254C-46E1-8C0D-AAD89B67EF49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE08ED47-27FD-4136-84C6-78695C91A9DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE08ED47-27FD-4136-84C6-78695C91A9DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE08ED47-27FD-4136-84C6-78695C91A9DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE08ED47-27FD-4136-84C6-78695C91A9DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88ABF7EF-EDA8-4755-93A9-68ED04AEE99F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88ABF7EF-EDA8-4755-93A9-68ED04AEE99F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88ABF7EF-EDA8-4755-93A9-68ED04AEE99F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88ABF7EF-EDA8-4755-93A9-68ED04AEE99F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,7 +57,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3909AE2F-2E9D-453A-BC1C-BAFB9733E2A4} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
 		{3856EE23-9798-4C64-9B65-0D46FBB234B0} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
-		{800989B9-3854-4E69-AC00-F1EBC7BC0A07} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
-		{F9086230-1756-4E09-93FD-0CB392AB94CA} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
+		{D52B625D-254C-46E1-8C0D-AAD89B67EF49} = {C5CBCF03-F48C-40D9-AE03-1FA4062EAB33}
+		{BE08ED47-27FD-4136-84C6-78695C91A9DC} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
+		{88ABF7EF-EDA8-4755-93A9-68ED04AEE99F} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
 	EndGlobalSection
 EndGlobal

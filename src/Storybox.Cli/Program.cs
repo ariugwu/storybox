@@ -1,24 +1,22 @@
-﻿using System;
-using Storybox.Core.Domain.Loader;
+﻿using Compose;
+using Storybox.Core;
+using System;
 
 namespace Storybox.Cli
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            Console.WriteLine("Please type the game you want to play:");
-            Console.Write(">");
-
-            var gameName = Console.ReadLine();
-
-            var gameLibraryType = (GameLibrary) int.Parse(gameName);
-
-            var game = GameFactory.Create(gameLibraryType);
-            
-            Console.WriteLine("You choose: {0}", game.Name);
-
-            Console.ReadKey();
+            var app = new CommandLineApplication();
+            app.UseServices(services =>
+            {
+                services
+                    .AddCommandLine()
+                    .AddCore();
+            });
+            app.UseCommandLineInterface();
+            return app.Execute();
         }
     }
 }
