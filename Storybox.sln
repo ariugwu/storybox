@@ -3,13 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Cli", "Storybox.Cli\Storybox.Cli.csproj", "{3909AE2F-2E9D-453A-BC1C-BAFB9733E2A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Cli", "src\Storybox.Cli\Storybox.Cli.csproj", "{3909AE2F-2E9D-453A-BC1C-BAFB9733E2A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Core", "Storybox.Core\Storybox.Core.csproj", "{3856EE23-9798-4C64-9B65-0D46FBB234B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Core", "src\Storybox.Core\Storybox.Core.csproj", "{3856EE23-9798-4C64-9B65-0D46FBB234B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Data", "Storybox.Data\Storybox.Data.csproj", "{800989B9-3854-4E69-AC00-F1EBC7BC0A07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Data", "src\Storybox.Data\Storybox.Data.csproj", "{800989B9-3854-4E69-AC00-F1EBC7BC0A07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Common", "Storybox.Common\Storybox.Common.csproj", "{F9086230-1756-4E09-93FD-0CB392AB94CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Common", "src\Storybox.Common\Storybox.Common.csproj", "{F9086230-1756-4E09-93FD-0CB392AB94CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C4A39258-FC90-4C99-835B-4DADE67A31F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C5CBCF03-F48C-40D9-AE03-1FA4062EAB33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{177C4D8B-5B6B-44B3-9C1C-875190A2EE02}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +47,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3909AE2F-2E9D-453A-BC1C-BAFB9733E2A4} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
+		{3856EE23-9798-4C64-9B65-0D46FBB234B0} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
+		{800989B9-3854-4E69-AC00-F1EBC7BC0A07} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
+		{F9086230-1756-4E09-93FD-0CB392AB94CA} = {C4A39258-FC90-4C99-835B-4DADE67A31F1}
 	EndGlobalSection
 EndGlobal

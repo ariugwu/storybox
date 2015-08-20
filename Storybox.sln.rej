@@ -1,0 +1,9 @@
+diff a/Storybox.sln b/Storybox.sln	(rejected hunks)
+@@ -1,5 +1,7 @@
+ ﻿
+ Microsoft Visual Studio Solution File, Format Version 12.00
++# Visual Studio 14
++VisualStudioVersion = 14.0.23107.0
+ MinimumVisualStudioVersion = 10.0.40219.1
+ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storybox.Cli", "src\Storybox.Cli\Storybox.Cli.csproj", "{3909AE2F-2E9D-453A-BC1C-BAFB9733E2A4}"
+ EndProject
