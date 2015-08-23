@@ -2,7 +2,7 @@
 The idea behind Storybox is to do a ground up [interactive fiction] (https://en.wikipedia.org/wiki/Interactive_fiction) engine.
 
 # Interface
-Ideally we'll be able to produce an interface similar to [PlanetFall] (https://en.wikipedia.org/wiki/Planetfall) and [Galatea](http://iplayif.com/?story=http://parchment.toolness.com/if-archive/games/zcode/Galatea.zblorb.js).
+Ideally we'll be able to produce an interface similar to [PlanetFall] (https://en.wikipedia.org/wiki/Planetfall), [Galatea](http://iplayif.com/?story=http://parchment.toolness.com/if-archive/games/zcode/Galatea.zblorb.js), and [Hitchhiker's Guide] (http://www.bbc.co.uk/radio4/hitchhikers/game_nolan.shtml).
 
 # Complexity and Scope
 Progressing through the game will be something like a choose your own adventure with no branching.
