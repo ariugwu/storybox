@@ -1,4 +1,5 @@
 ﻿using System;
+using Storybox.Core.Domain;
 using Storybox.Core.Domain.Loader;
 
 namespace Storybox.Cli
@@ -7,16 +8,20 @@ namespace Storybox.Cli
     {
         static void Main(string[] args)
         {
+            var context = new GameContext();
+
             Console.WriteLine("Please type the game you want to play:");
             Console.Write(">");
 
-            var gameName = Console.ReadLine();
+            context.UserInput = Console.ReadLine();
 
-            var gameLibraryType = (GameLibrary) int.Parse(gameName);
+            context.Interpreter = new Core.Domain.Interpreter.GameSelectionInterpreter(); //TODO: A smarter way to know what interpreter to use.
 
-            var game = GameFactory.Create(gameLibraryType);
-            
-            Console.WriteLine("You choose: {0}", game.Name);
+            context.Interpreter.Interpret(context);
+
+            context.Game = GameFactory.Create(context.GameLibraryItem);
+
+            Console.WriteLine("You choose: {0}", context.Game.Name);
 
             Console.ReadKey();
         }
