@@ -4,7 +4,7 @@ The idea behind Storybox is to do a ground up [interactive fiction] (https://en.
 For a really geeky deep dive see the documentary [Get Lamp] (https://www.youtube.com/watch?v=LRhbcDzbGSU)
 
 # Interface
-Ideally we'll be able to produce an interface similar to [PlanetFall] (https://en.wikipedia.org/wiki/Planetfall), [Galatea](http://iplayif.com/?story=http://parchment.toolness.com/if-archive/games/zcode/Galatea.zblorb.js), and [Hitchhiker's Guide] (http://www.bbc.co.uk/radio4/hitchhikers/game_nolan.shtml).
+Ideally we'll be able to produce an interface similar to [PlanetFall] (https://en.wikipedia.org/wiki/Planetfall), [Galatea](http://iplayif.com/?story=http://parchment.toolness.com/if-archive/games/zcode/Galatea.zblorb.js), [Amnesia] (http://www.old-games.com/download/1200/amnesia), and [Hitchhiker's Guide] (http://www.bbc.co.uk/radio4/hitchhikers/game_nolan.shtml).
 
 # Complexity and Scope
 Progressing through the game will be something like a choose your own adventure with no branching.
