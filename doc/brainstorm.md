@@ -14,7 +14,7 @@ Progressing through the game will be something like a choose your own adventure 
 * Narrative Items: These are items which only return more narrative for supported commands.
 
 * Trigger Items: Interacting with these items might progress the story for better or worse.
-* 
+
 # Personal Goal(s)
 I tried to write a novel once and it turns out I really don't have the fingers for it. I like the creative process of writing and world building though. I also tried to write a few games and really don't have the time. Interactive fiction feels like the right mix of a couple interests (critical thinking, code, and creative writing). Being able to add variable length through exploration is also really appealing.
 
