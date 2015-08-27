@@ -1,9 +1,10 @@
 ﻿using Storybox.Common;
-using Storybox.Common.Domain.Interpreter;
-using Storybox.Common.Domain.Loader;
 
-namespace Storybox.Core.Domain
+namespace Storybox.Core
 {
+    using Storybox.Common.Interpreter;
+    using Storybox.Common.Loader;
+
     public class GameContext : IGameContext
     {
         public Expression Interpreter { get; set; }

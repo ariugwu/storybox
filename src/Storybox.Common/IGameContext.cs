@@ -1,7 +1,7 @@
-﻿using Storybox.Common.Domain.Loader;
-
-namespace Storybox.Common
+﻿namespace Storybox.Common
 {
+    using Loader;
+
     public interface IGameContext
     {
         GameLibrary GameLibraryItem { get; set; }

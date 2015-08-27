@@ -1,9 +1,11 @@
 ﻿using System;
-using Storybox.Core.Domain;
-using Storybox.Core.Domain.Loader;
 
 namespace Storybox.Cli
 {
+    using Core;
+    using Core.Interpreter;
+    using Core.Loader;
+
     class Program
     {
         static void Main(string[] args)
@@ -15,13 +17,13 @@ namespace Storybox.Cli
 
             context.UserInput = Console.ReadLine();
 
-            context.Interpreter = new Core.Domain.Interpreter.GameSelectionInterpreter(); //TODO: A smarter way to know what interpreter to use.
+            context.Interpreter = new GameSelectionInterpreter(); //TODO: A smarter way to know what interpreter to use.
 
             context.Interpreter.Interpret(context);
 
             context.Game = GameFactory.Create(context.GameLibraryItem);
 
-            Console.WriteLine("You choose: {0}", context.Game.Name);
+            Console.WriteLine("You chose: {0}", context.Game.Name);
 
             Console.ReadKey();
         }

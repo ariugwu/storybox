@@ -39,9 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Interpreter\Expression.cs" />
-    <Compile Include="Domain\Loader\GameLibrary.cs" />
-    <Compile Include="Domain\Loader\IGame.cs" />
+    <Compile Include="Interpreter\Expression.cs" />
+    <Compile Include="Loader\GameLibrary.cs" />
+    <Compile Include="Loader\IGame.cs" />
     <Compile Include="IGameContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

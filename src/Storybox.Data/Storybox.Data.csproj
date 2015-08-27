@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Loader\BubbleCommander.cs" />
-    <Compile Include="Domain\Loader\Syn.cs" />
+    <Compile Include="Loader\BubbleCommander.cs" />
+    <Compile Include="Loader\Syn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

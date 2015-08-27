@@ -38,9 +38,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\GameContext.cs" />
-    <Compile Include="Domain\Interpreter\GameSelectionInterpreter.cs" />
-    <Compile Include="Domain\Loader\GameFactory.cs" />
+    <Compile Include="GameContext.cs" />
+    <Compile Include="Interpreter\GameSelectionInterpreter.cs" />
+    <Compile Include="Loader\GameFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

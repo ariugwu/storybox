@@ -1,4 +1,4 @@
-﻿namespace Storybox.Common.Domain.Loader
+﻿namespace Storybox.Common.Loader
 {
     public interface IGame
     {
