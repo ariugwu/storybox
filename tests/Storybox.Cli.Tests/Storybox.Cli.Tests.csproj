@@ -85,6 +85,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="EntityComponentSystemTests.cs" />
     <Compile Include="Fake\Game.cs" />
     <Compile Include="Fake\GameList.cs" />
     <Compile Include="PreResolvedGameFactoryTests.cs" />

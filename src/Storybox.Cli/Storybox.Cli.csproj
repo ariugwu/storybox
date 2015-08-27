@@ -58,7 +58,10 @@
     <Compile Include="ApplicationExtensions.cs" />
     <Compile Include="CommandLine.cs" />
     <Compile Include="ConsoleCommandLine.cs" />
+    <Compile Include="EntityComponentSystem\EntityComponentExtensions.cs" />
+    <Compile Include="EntityComponentTracker.cs" />
     <Compile Include="GameFactory.cs" />
+    <Compile Include="NotInitialisedException.cs" />
     <Compile Include="PreResolvedGameFactory.cs" />
     <Compile Include="HardcodedEnglishResourceDictionary.cs" />
     <Compile Include="Program.cs" />

@@ -1,6 +1,5 @@
 ﻿using Compose;
 using Storybox.Core;
-using System;
 
 namespace Storybox.Cli
 {
