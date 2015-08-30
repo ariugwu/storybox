@@ -2,6 +2,8 @@
 {
 	interface EntityComponentTracker
 	{
-		void Assign(object entity, object component);
+		void Assign<T>(object entity, T component);
+
+		T Fetch<T>(object entity);
 	}
 }
