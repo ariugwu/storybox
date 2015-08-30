@@ -6,9 +6,9 @@ using TestAttributes;
 
 namespace Storybox.Cli.Tests
 {
-	public class EntityComponentSystemExtensionsTests
+	public class EntityComponentExtensionsTests
 	{
-		public EntityComponentSystemExtensionsTests()
+		public EntityComponentExtensionsTests()
 		{
 			EntityComponentExtensions.Tracker = null;
         }

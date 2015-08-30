@@ -61,6 +61,7 @@
     <Compile Include="EntityComponentSystem\EntityComponentExtensions.cs" />
     <Compile Include="EntityComponentTracker.cs" />
     <Compile Include="GameFactory.cs" />
+    <Compile Include="InMemoryEntityComponentStateManager.cs" />
     <Compile Include="NotInitialisedException.cs" />
     <Compile Include="PreResolvedGameFactory.cs" />
     <Compile Include="HardcodedEnglishResourceDictionary.cs" />
