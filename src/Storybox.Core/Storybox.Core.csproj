@@ -39,11 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\GameContext.cs" />
-    <Compile Include="Domain\Interpreter\CommandInterpreter.cs" />
-    <Compile Include="Domain\Interpreter\GameSelectionInterpreter.cs" />
-    <Compile Include="Domain\Interpreter\PlayerInterpreter.cs" />
-    <Compile Include="Domain\Loader\GameFactory.cs" />
+    <Compile Include="GameContext.cs" />
+    <Compile Include="Interpreter\CommandInterpreter.cs" />
+    <Compile Include="Interpreter\GameSelectionInterpreter.cs" />
+    <Compile Include="Interpreter\PlayerInterpreter.cs" />
+    <Compile Include="Loader\GameFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +56,7 @@
       <Name>Storybox.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
