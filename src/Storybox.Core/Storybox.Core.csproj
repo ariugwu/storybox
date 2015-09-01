@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\GameContext.cs" />
+    <Compile Include="Domain\Interpreter\CommandInterpreter.cs" />
     <Compile Include="Domain\Interpreter\GameSelectionInterpreter.cs" />
+    <Compile Include="Domain\Interpreter\PlayerInterpreter.cs" />
     <Compile Include="Domain\Loader\GameFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

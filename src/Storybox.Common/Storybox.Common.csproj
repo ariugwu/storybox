@@ -42,6 +42,7 @@
     <Compile Include="Domain\Interpreter\Expression.cs" />
     <Compile Include="Domain\Loader\GameLibrary.cs" />
     <Compile Include="Domain\Loader\IGame.cs" />
+    <Compile Include="Game\CommandType.cs" />
     <Compile Include="IGameContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
