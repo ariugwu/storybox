@@ -1,10 +1,11 @@
 ﻿using Storybox.Common;
-using Storybox.Common.Domain.Interpreter;
-using Storybox.Common.Domain.Loader;
 using Storybox.Common.Game;
 
 namespace Storybox.Core.Domain
 {
+    using Storybox.Common.Interpreter;
+    using Storybox.Common.Loader;
+
     public class GameContext : IGameContext
     {
 

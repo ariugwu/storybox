@@ -1,10 +1,12 @@
 ﻿using System;
 using Storybox.Core.Domain;
-using Storybox.Core.Domain.Interpreter;
-using Storybox.Core.Domain.Loader;
+using Storybox.Core.Interpreter;
+using Storybox.Core.Loader;
 
 namespace Storybox.Cli
 {
+    using Storybox.Core.Domain.Interpreter;
+
     class Program
     {
         static void Main(string[] args)
