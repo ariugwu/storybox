@@ -1,9 +1,9 @@
-﻿using Storybox.Common;
-using Storybox.Common.Domain.Interpreter;
-using Storybox.Common.Domain.Loader;
-
-namespace Storybox.Core.Domain.Interpreter
+﻿namespace Storybox.Core.Interpreter
 {
+    using Common;
+    using Common.Interpreter;
+    using Common.Loader;
+
     public class GameSelectionInterpreter : Expression
     {
         public override void Interpret(IGameContext context)

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Document created by: Ari Ugwu,DBD with XmlGrid Online XML Editor,http://xmlgrid.net -->
+<Game>
+    <Name>Example</Name>
+    <Author></Author>
+    <CreatedDate></CreatedDate>
+    <Story>
+        <Chapters>
+            <Chapter>
+                <Resume>
+                    <StartFromHereCode></StartFromHereCode>
+                    <ReturnMessage></ReturnMessage>
+                </Resume>
+                <MainText></MainText>
+                <Commands>
+                    <Command>
+                        <Name></Name>
+                        <Response></Response>
+                        <Trigger>
+                            <DoesAdvance></DoesAdvance>
+                            <AdvanceTo></AdvanceTo>
+                        </Trigger>>
+                        <Prerequisite></Prerequisite>
+                    </Command>
+                </Commands>
+            </Chapter>
+        </Chapters>
+    </Story>
+</Game>

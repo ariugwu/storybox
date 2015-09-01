@@ -1,4 +1,4 @@
-﻿namespace Storybox.Common.Domain.Interpreter
+﻿namespace Storybox.Common.Interpreter
 {
     public abstract class Expression
     {

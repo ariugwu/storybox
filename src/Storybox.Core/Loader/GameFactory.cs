@@ -1,9 +1,10 @@
 ﻿using System;
-using Storybox.Common.Domain.Loader;
-using Storybox.Data.Domain.Loader;
+using Storybox.Common.Loader;
 
-namespace Storybox.Core.Domain.Loader
+namespace Storybox.Core.Loader
 {
+    using Storybox.Data.Loader;
+
     public class GameFactory
     {
         public static IGame Create(GameLibrary gameName)
