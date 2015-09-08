@@ -1,11 +1,10 @@
 ﻿using System;
-using Storybox.Core.Domain;
+using Storybox.Core;
 using Storybox.Core.Interpreter;
 using Storybox.Core.Loader;
 
 namespace Storybox.Cli
 {
-    using Storybox.Core.Domain.Interpreter;
 
     class Program
     {
@@ -18,14 +17,11 @@ namespace Storybox.Cli
 
             context.UserInput = Console.ReadLine(); // User Input
 
-            context.Interpreter = new PlayerInterpreter(); // Load Interpreter
-
-            context.Interpreter.Interpret(context); // Interpret UserInput
+            context.Interpret(); // Interpret UserInput
 
             Console.WriteLine("Welcome {0}!", context.Player); // Display output of interpretation
 
             Console.WriteLine();
-
 
             Console.WriteLine("1. Bubble Commander");
             Console.WriteLine("2. Syn");
@@ -34,9 +30,7 @@ namespace Storybox.Cli
 
             context.UserInput = Console.ReadLine();
 
-            context.Interpreter = new GameSelectionInterpreter(); //TODO: A smarter way to know what interpreter to use.
-
-            context.Interpreter.Interpret(context);
+            context.Interpret(); //TODO: How do we actually change the interpreter
 
             context.Game = GameFactory.Create(context.GameLibraryItem);
 
@@ -47,9 +41,7 @@ namespace Storybox.Cli
 
             context.UserInput = Console.ReadLine();
 
-            context.Interpreter = new CommandInterpreter();
-
-            context.Interpreter.Interpret(context);
+            context.Interpret();
 
             Console.WriteLine();
 

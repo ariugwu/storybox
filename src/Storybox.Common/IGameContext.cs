@@ -1,9 +1,16 @@
-﻿namespace Storybox.Common
+﻿using Storybox.Common.Game;
+
+namespace Storybox.Common
 {
     using Loader;
 
     public interface IGameContext
     {
+
+        GameState GameState { get; set; }
+
+        GameStateType GameStateType { get; set; }
+
         GameLibrary GameLibraryItem { get; set; }
 
         IGame Game { get; set; }

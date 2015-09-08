@@ -1,17 +1,26 @@
 ﻿using Storybox.Common;
 using Storybox.Common.Game;
+using Storybox.Common.Loader;
+using Storybox.Core.Game;
 
-namespace Storybox.Core.Domain
+namespace Storybox.Core
 {
-    using Storybox.Common.Interpreter;
-    using Storybox.Common.Loader;
-
     public class GameContext : IGameContext
     {
+        #region Constructor(s)
+        
+        public GameContext()
+        {
+            GameState = new LoadPlayerState();
+        }
 
-        #region Properties 
+        #endregion
 
-        public Expression Interpreter { get; set; }
+        #region Properties
+
+        public GameStateType GameStateType { get; set; }
+
+        public GameState GameState { get; set; }
 
         public GameLibrary GameLibraryItem { get; set; }
 
@@ -25,6 +34,14 @@ namespace Storybox.Core.Domain
 
         #endregion
 
+        #region Method(s)
+
+        public void Interpret()
+        {
+            GameState.Interpret(this);
+        }
+
+        #endregion
 
     }
 }
