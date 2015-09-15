@@ -2,6 +2,7 @@
 using Storybox.Common.Game;
 using Storybox.Common.Loader;
 using Storybox.Core.Game;
+using Storybox.Core.Game.Handler;
 
 namespace Storybox.Core
 {
@@ -12,11 +13,21 @@ namespace Storybox.Core
         public GameContext()
         {
             GameState = new LoadPlayerState();
+
+            GameHandler = new PlayerLoadHandler();
+
+            var gameSelectionHandler = new GameSelectionHandler();
+            var gameCommandHandler = new GameCommandHandler();
+
+            GameHandler.SetSuccessor(gameSelectionHandler);
+            gameSelectionHandler.SetSuccessor(gameCommandHandler);
         }
 
         #endregion
 
         #region Properties
+
+        public GameHandler GameHandler { get; set; }
 
         public GameStateType GameStateType { get; set; }
 
@@ -36,9 +47,9 @@ namespace Storybox.Core
 
         #region Method(s)
 
-        public void Interpret()
+        public void Process()
         {
-            GameState.Interpret(this);
+            GameHandler.Process(this);
         }
 
         #endregion

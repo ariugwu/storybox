@@ -6,6 +6,7 @@ namespace Storybox.Common
 
     public interface IGameContext
     {
+        GameHandler GameHandler { get; set; }
 
         GameState GameState { get; set; }
 

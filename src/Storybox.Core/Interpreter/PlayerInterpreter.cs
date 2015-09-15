@@ -1,8 +1,9 @@
 ﻿using Storybox.Common;
+using Storybox.Common.Interpreter;
 
-namespace Storybox.Core.Domain.Interpreter
+namespace Storybox.Core.Interpreter
 {
-    using Storybox.Common.Interpreter;
+    
 
     public class PlayerInterpreter : Expression
     {
