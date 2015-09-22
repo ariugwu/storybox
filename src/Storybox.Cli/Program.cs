@@ -1,18 +1,11 @@
-﻿using System;
-using Storybox.Core;
-
-namespace Storybox.Cli
+﻿namespace Storybox.Cli
 {
-
     class Program
     {
         static void Main(string[] args)
         {
-            var context = new GameContext();
-
-            context.Process();
-
-            Console.ReadKey();
+            var app = new AppContext();
+            app.Start();
 
         }
 

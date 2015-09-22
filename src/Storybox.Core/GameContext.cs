@@ -14,16 +14,17 @@ namespace Storybox.Core
         {
             GameState = new LoadPlayerState();
 
-            GameHandler = new PlayerLoadHandler();
+            GameHandler = _playerloadHandler;
 
-            var gameSelectionHandler = new GameSelectionHandler();
-            var gameCommandHandler = new GameCommandHandler();
-
-            GameHandler.SetSuccessor(gameSelectionHandler);
-            gameSelectionHandler.SetSuccessor(gameCommandHandler);
+            GameHandler.SetSuccessor(_gameSelectionHandler);
+            _gameSelectionHandler.SetSuccessor(_gameCommandHandler);
         }
 
         #endregion
+
+        private GameHandler _playerloadHandler = new PlayerLoadHandler();
+        private GameHandler _gameSelectionHandler = new GameSelectionHandler();
+        private GameHandler _gameCommandHandler = new GameCommandHandler();
 
         #region Properties
 
@@ -47,9 +48,15 @@ namespace Storybox.Core
 
         #region Method(s)
 
-        public void Process()
+        public void Start()
         {
             GameHandler.Process(this);
+        }
+
+        public void SetGameSelectionHandler(GameHandler handler)
+        {
+            _gameSelectionHandler = handler;
+            _gameSelectionHandler.SetSuccessor(_gameCommandHandler);
         }
 
         #endregion

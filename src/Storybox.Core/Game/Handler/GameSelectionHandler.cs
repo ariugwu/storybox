@@ -1,5 +1,4 @@
-﻿using System;
-using Storybox.Common;
+﻿using Storybox.Common;
 using Storybox.Common.Game;
 
 namespace Storybox.Core.Game.Handler
@@ -8,7 +7,8 @@ namespace Storybox.Core.Game.Handler
     {
         public override void HandleRequest(IGameContext gameContext)
         {
-            throw new NotImplementedException();
+            gameContext.GameStateType = GameStateType.GameSelection;
+            gameContext.GameState = new GameSelectionState();
         }
     }
 }
