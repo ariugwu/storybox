@@ -19,14 +19,21 @@ namespace Storybox.Common.Game
             }
         }
 
-        public virtual void LoadState(IGameContext context)
-        {
-            // Empty on purpose
-        }
+        public abstract void LoadState(IGameContext context);
 
         public abstract void DisplayPrompt(IGameContext context);
 
-        public abstract void Interpret(IGameContext context);
+        public abstract void Interpret(ICommand command);
+
+        public virtual void Process(IGameContext context)
+        {
+         // EMPTY ON PURPOSE   
+        }
+
+        public virtual void ExecuteCommand(IGameContext context)
+        {
+            context.CurrentCommand.Execute(context);
+        }
 
         public abstract void DisplayResponse(IGameContext context);
 

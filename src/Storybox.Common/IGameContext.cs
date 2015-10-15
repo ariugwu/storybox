@@ -18,6 +18,6 @@ namespace Storybox.Common
 
         string Player { get; set; }
 
-        string UserInput { get; set; }
+        ICommand CurrentCommand { get; set; }
     }
 }

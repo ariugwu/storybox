@@ -40,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameContext.cs" />
+    <Compile Include="Game\Command\ExecuteGameInstruction.cs" />
+    <Compile Include="Game\Command\LoadGame.cs" />
+    <Compile Include="Game\Command\LoadPlayer.cs" />
     <Compile Include="Game\GameCommandState.cs" />
     <Compile Include="Game\GameSelectionState.cs" />
     <Compile Include="Game\Handler\GameCommandHandler.cs" />

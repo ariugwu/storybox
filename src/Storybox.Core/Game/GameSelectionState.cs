@@ -1,8 +1,9 @@
 ﻿using System;
 using Storybox.Common;
 using Storybox.Common.Game;
+using Storybox.Common.Loader;
+using Storybox.Core.Game.Command;
 using Storybox.Core.Interpreter;
-using Storybox.Core.Loader;
 
 namespace Storybox.Core.Game
 {
@@ -20,11 +21,20 @@ namespace Storybox.Core.Game
             Console.Write(">");
         }
 
-        public override void Interpret(IGameContext context)
+        public override void LoadState(IGameContext context)
         {
             context.GameStateType = GameStateType.GameSelection;
-            Interpreter.Interpret(context);
-            context.Game = GameFactory.Create(context.GameLibraryItem);
+            context.CurrentCommand = new LoadGame();
+        }
+
+        public override void Interpret(ICommand command)
+        {
+            Interpreter.Interpret(command);        
+        }
+
+        public override void Process(IGameContext context)
+        {
+            context.GameLibraryItem = (GameLibrary)int.Parse(context.CurrentCommand.Parameter);
         }
 
         public override void DisplayResponse(IGameContext context)

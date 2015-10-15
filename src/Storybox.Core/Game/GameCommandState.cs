@@ -11,13 +11,18 @@ namespace Storybox.Core.Game
         {
         }
 
+        public override void LoadState(IGameContext context)
+        {
+            //TODO: Do stuff?
+        }
+
         public override void DisplayPrompt(IGameContext context)
         {
             Console.WriteLine("Please input a command:");
             Console.Write(">");
         }
 
-        public override void Interpret(IGameContext context)
+        public override void Interpret(ICommand command)
         {
             throw new NotImplementedException();
         }

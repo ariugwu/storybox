@@ -3,13 +3,11 @@ using Storybox.Common.Interpreter;
 
 namespace Storybox.Core.Interpreter
 {
-    
-
     public class PlayerInterpreter : Expression
     {
-        public override void Interpret(IGameContext context)
+        public override void Interpret(ICommand command)
         {
-            context.Player = context.UserInput;
+            command.Parameter = command.UserInput;
         }
     }
 }

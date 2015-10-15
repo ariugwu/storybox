@@ -6,7 +6,6 @@
         {
             var app = new AppContext();
             app.Start();
-
         }
 
     }

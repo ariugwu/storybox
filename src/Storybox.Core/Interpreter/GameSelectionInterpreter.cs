@@ -2,13 +2,12 @@
 {
     using Common;
     using Common.Interpreter;
-    using Common.Loader;
 
     public class GameSelectionInterpreter : Expression
     {
-        public override void Interpret(IGameContext context)
+        public override void Interpret(ICommand command)
         {
-            context.GameLibraryItem = (GameLibrary)int.Parse(context.UserInput);
+            command.Parameter = command.UserInput;
         }
     }
 }

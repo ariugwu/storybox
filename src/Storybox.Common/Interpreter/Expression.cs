@@ -2,6 +2,8 @@
 {
     public abstract class Expression
     {
-        public abstract void Interpret(IGameContext context);
+        public ICommand Command { get; set; }
+
+        public abstract void Interpret(ICommand command);
     }
 }

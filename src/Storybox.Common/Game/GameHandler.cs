@@ -19,15 +19,24 @@ namespace Storybox.Common.Game
 
             gameContext.GameState.DisplayPrompt(gameContext);
 
-            gameContext.UserInput = Console.ReadLine();
+            gameContext.CurrentCommand.UserInput = Console.ReadLine();
 
-            gameContext.GameState.Interpret(gameContext);
+            gameContext.GameState.Interpret(gameContext.CurrentCommand); // TODO: Pick a better for this: 'InterpretUserInput'?
+
+            gameContext.GameState.Process(gameContext); // TODO: Pick a better word for this: 'InitCommand'?
+
+            gameContext.GameState.ExecuteCommand(gameContext);
 
             gameContext.GameState.DisplayResponse(gameContext);
 
             gameContext.GameState.UnloadState(gameContext);
 
-            successor.Process(gameContext);
+            if (successor != null)
+            {
+                successor.Process(gameContext);
+            }
+
+            gameContext.CurrentCommand = null; // We're done with the command so blank it out. NOTE: This could be part of a 'Finalize' handler.
         }
 
         public abstract void HandleRequest(IGameContext gameContext);

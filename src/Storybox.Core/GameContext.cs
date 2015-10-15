@@ -40,9 +40,7 @@ namespace Storybox.Core
 
         public string Player { get; set; }
 
-        public string UserInput { get; set; }
-
-        public CommandType CurrentCommand { get; set; }
+        public ICommand CurrentCommand { get; set; }
 
         #endregion
 

@@ -7,7 +7,7 @@ namespace Storybox.Core.Domain.Interpreter
 
     public class CommandInterpreter : Expression
     {
-        public override void Interpret(IGameContext context)
+        public override void Interpret(ICommand command)
         {
             throw new NotImplementedException();
         }
