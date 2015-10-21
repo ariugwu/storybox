@@ -4,8 +4,6 @@ namespace Storybox.Common
 {
     public abstract class Command : ICommand
     {
-        public IGameContext GameContext { get; set; }
-
         public CommandType CommandType { get; set; }
 
         public string Parameter { get; set; }
