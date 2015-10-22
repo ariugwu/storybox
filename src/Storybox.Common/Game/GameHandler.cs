@@ -1,4 +1,5 @@
 ﻿using System;
+using Storybox.Common.Loader;
 
 namespace Storybox.Common.Game
 {
@@ -40,5 +41,19 @@ namespace Storybox.Common.Game
         }
 
         public abstract void HandleRequest(IGameContext gameContext);
+
+        public void InitGame(IGame game)
+        {
+            // 1. Fetch Player Character
+            game.LoadPlayer();
+            // 2. Load game assets
+            game.LoadAssets();
+        }
+
+        public void UnloadGame(IGame game)
+        {
+            // 1. Unload game
+            game.Unload();
+        }
     }
 }

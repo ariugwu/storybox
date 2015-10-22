@@ -2,6 +2,7 @@
 using Storybox.Common;
 using Storybox.Common.Game;
 using Storybox.Core.Domain.Interpreter;
+using Storybox.Core.Game.Command;
 
 namespace Storybox.Core.Game
 {
@@ -13,7 +14,10 @@ namespace Storybox.Core.Game
 
         public override void LoadState(IGameContext context)
         {
-            //TODO: Do stuff?
+            context.GameStateType = GameStateType.Playing;
+            context.CurrentCommand = new ExecuteGameInstruction();
+
+            context.GameHandler.InitGame(context.Game);
         }
 
         public override void DisplayPrompt(IGameContext context)
@@ -32,5 +36,11 @@ namespace Storybox.Core.Game
             throw new NotImplementedException();
         }
 
+        public override void UnloadState(IGameContext context)
+        {
+            context.GameHandler.UnloadGame(context.Game);
+
+            base.UnloadState(context);
+        }
     }
 }

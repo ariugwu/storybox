@@ -1,4 +1,6 @@
-﻿using Storybox.Common;
+﻿using System;
+using System.Diagnostics.Eventing.Reader;
+using Storybox.Common;
 using Storybox.Common.Game;
 using Storybox.Common.Loader;
 using Storybox.Core.Game;
@@ -9,7 +11,7 @@ namespace Storybox.Core
     public class GameContext : IGameContext
     {
         #region Constructor(s)
-        
+
         public GameContext()
         {
             GameState = new LoadPlayerState();
